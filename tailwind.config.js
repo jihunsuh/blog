@@ -1,9 +1,7 @@
 const colors = require('tailwindcss/colors');
-const { reusableTailwindPreset } = require('@entropyparadox/reusable-react');
-
 module.exports = {
   purge: [],
-  presets: [reusableTailwindPreset],
+  presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -27,6 +25,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      'brand-1': '#6d2cee',
+      'brand-2': '#00e5a3',
     },
     spacing: {
       px: '1px',
@@ -64,6 +64,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      128: '32rem',
     },
     animation: {
       none: 'none',
@@ -548,6 +549,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       prose: '65ch',
+      ...theme('spacing'),
       ...breakpoints(theme('screens')),
     }),
     minHeight: {
